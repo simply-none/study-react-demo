@@ -7,7 +7,7 @@ import { useState } from "react";
 
 export default function Home() {
 
-  let [i, si] = useState('hooks/useEffect/connect-to-chat')
+  let [i, si] = useState('')
   let router = useRouter()
   function c (e) {
     console.log(e)
@@ -21,6 +21,7 @@ export default function Home() {
     <>
       <input value={i} onChange={c} />
       <button onClick={p}>go</button>
+      <hr/>
     </>
   );
 }
