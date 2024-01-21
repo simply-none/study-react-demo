@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  pageExtensions: ['jsx', 'js'],
-  
+  output: 'export',
+  transpilePackages: ['antd'],
 };
 
 export default nextConfig;

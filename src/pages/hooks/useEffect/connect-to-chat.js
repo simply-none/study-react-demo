@@ -1,6 +1,6 @@
+"use client"
 import { useState, useEffect } from "react";
 import { createConnection } from "./chat.js";
-import Home from "@/router.js";
 
 function ChatRoom({ roomId }) {
   const [serverUrl, setServerUrl] = useState("https://xxx");
@@ -51,7 +51,6 @@ export default function App() {
   const [show, setShow] = useState(false)
   return (
     <>
-    <Home/>
 
       <label>
         choose the chat room: {''}
