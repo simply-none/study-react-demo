@@ -1,6 +1,16 @@
 "use client"
 import { useState, useEffect } from "react";
-import { createConnection } from "./chat.js";
+
+function createConnection(serverUrl, roomId) {
+  return {
+    connect () {
+      return Promise.resolve(Date.now() + ' connecting to ' + roomId + 'room at ' + serverUrl)
+    },
+    disconnect() {
+      return Promise.resolve(Date.now() + ' disconnected from ' + roomId + 'room at ' + serverUrl)
+    }
+  }
+}
 
 function ChatRoom({ roomId }) {
   const [serverUrl, setServerUrl] = useState("https://xxx");

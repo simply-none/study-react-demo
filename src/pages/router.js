@@ -9,11 +9,11 @@ import dynamic from 'next/dynamic'
 const routes = [
   {
     path: "/",
-    element: dynamic(() => import('./hooks/useEffect/connect-to-chat'), { ssr: false})
+    element: dynamic(() => import('./hooks/useEffect/linkToOutsideSystem/connectToChat'), { ssr: false})
   },
   {
     path: "/about",
-    element:dynamic(() => import('./hooks/useEffect/connect-to-chat'), { ssr: false})
+    element:dynamic(() => import('./hooks/useEffect/linkToOutsideSystem/connectToChat'), { ssr: false})
   },
 ];
 // 使用useRoutes 创建

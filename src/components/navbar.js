@@ -10,6 +10,7 @@ export default function Home() {
   useEffect(() => {
     if (window) {
       navPath = JSON.parse(localStorage.getItem('nav-path'))
+      navPath = navPath.join('/').split('/')
     }
     if (!navPath || navPath.length === 0) {
       navPath = ['hooks', 'useEffect', 'connect-to-chat', '', '']
